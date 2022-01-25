@@ -17,7 +17,7 @@ if(!empty ($_GET["info"]) && strlen($_GET["info"]) > 5){
 	<body>
 	<?php
 	// important de vérifier que l'info ne soit pas vide, car le serveur va vouloir processer l'information avant meme que l'utilisateur est remplis le champ
-	if($showBox){ 
+	if(!empty ($_GET["info"]) && strlen($_GET["info"]) > 5){ 
 		?>
 
 	<div style="color :green ; background-color:#999; border:1px solid black">
