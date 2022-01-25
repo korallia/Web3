@@ -1,3 +1,8 @@
+<?php
+header("location:https://perdu.com");
+exit;
+// permet de quitter l'utilisateur de la page 
+?>
 
 
 
