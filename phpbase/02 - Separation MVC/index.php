@@ -2,23 +2,9 @@
 require_once("action/indexaction.php");
 $data = execute();
 //$data = dictionnaire
-
+require_once("partial/header.php");
 ?>
 
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <title>Vérification</title>
-        <link href="css/global.css" rel="stylesheet"/>
-    </head>
-    <body>
-		<div class="sectionAuthentification">
 			<h1>
 				Authentification nécessaire(<?= $data["version"] ?>)
 			</h1>
@@ -44,6 +30,6 @@ $data = execute();
 				<div class="formInput"><input type="image" src="images/submit.png" /></div>
 				<div class="formSeparator"></div>
 			</form>
-		</div>
-    </body>
-</html>
+		<?php
+			require_once("partial/footer.php")
+		?>
