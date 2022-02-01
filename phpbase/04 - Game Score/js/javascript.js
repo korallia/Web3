@@ -74,8 +74,11 @@ const activateMole = () => {
         }, 500);
     }    
     else if (totalTime == null) {
+        let node = document.querySelector("Button");
+        node.style.display ="inline";
         totalTime = new Date() - startTime;
         spriteList.push(new Tractor(totalTime));
+        document.querySelector("#pointage").value =totalTime;
     }
 }
 
@@ -93,3 +96,6 @@ const tick = () => {
 
     window.requestAnimationFrame(tick);
 }
+
+
+
