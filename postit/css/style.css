@@ -1,0 +1,17 @@
+.postit{
+    position: absolute;
+    width: 307px;
+    height: 303px;
+    background-image: url("../images/post-it.png");
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 60px;
+    transform: rotate(-20deg);
+    
+
+}
+.postit span{
+    transform: rotate(-5deg);
+    display: block;
+}
