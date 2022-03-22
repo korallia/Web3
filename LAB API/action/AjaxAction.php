@@ -1,0 +1,18 @@
+<?php
+    require_once("action/CommonAction.php");
+
+    class AjaxAction extends CommonAction {
+
+        public function __construct() {
+            parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
+        }
+
+        protected function executeAction() {
+            if (!empty($_POST["ipAddr"])) {
+                $ip = $_POST["ipAddr"];    
+                $json = file_get_contents("http://ip-api.com/json/" . $ip);
+                $result = json_decode($json);
+        }
+        return compact("result");
+    }
+}
